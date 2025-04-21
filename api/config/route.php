@@ -8,7 +8,7 @@ $route = implode('/', $segments);
 // var_dump($segments);
 
 if (!empty($route)) {
-    $dir = BASE_PATH . "/$route";
+    $dir = BASE_PATH . "/modules/$route";
     if(file_exists("$dir.php")) {
         include "$route.php";
     } else {
