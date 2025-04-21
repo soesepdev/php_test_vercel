@@ -17,7 +17,7 @@ if (!empty($route)) {
         include "$route.php";
     } else {
         if(file_exists("$dir/index.php")) {
-            include "$module/$route/index.php";
+            include BASE_PATH . "$module/$route/index.php";
         } else {
             echo "$dir/index.php";
         }
