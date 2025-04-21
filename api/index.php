@@ -10,9 +10,16 @@ $segments = explode('/', trim($path, '/'));
 // Gabungkan semua segmen menjadi satu string
 $route = implode('/', $segments);
 
-// Tampilkan route jika ada
+// Cek dan include file
 if (!empty($route)) {
-    include "$route.php";
+    if (file_exists("$route.php")) {
+        include "$route.php";
+    } elseif (file_exists("$route/index.php")) {
+        include "$route/index.php";
+    } else {
+        http_response_code(404);
+        echo "404 Not Found";
+    }
 } else {
     phpinfo();
 }
