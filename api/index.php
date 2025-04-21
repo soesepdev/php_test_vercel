@@ -3,8 +3,6 @@
 // define('BASE_PATH', __DIR__);
 // include "config/route.php";
 
-<?php
-
 $host = getenv('PGHOST') ?: 'aws-0-ap-southeast-1.pooler.supabase.com';
 $port = getenv('PGPORT') ?: '6543';
 $dbname = getenv('PGDATABASE') ?: 'postgres';
