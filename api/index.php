@@ -1,7 +1,7 @@
 <?php
 
-define('BASE_PATH', __DIR__);
-include "config/route.php";
+// define('BASE_PATH', __DIR__);
+// include "config/route.php";
 
 use MongoDB\Client;
 
