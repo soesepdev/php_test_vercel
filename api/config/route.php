@@ -11,15 +11,14 @@ if($segments[0] == 'config') {
 }
 
 if (!empty($route)) {
-    $module = "modules";
-    $dir = BASE_PATH . "/$module/$route";
+    $dir = BASE_PATH . "/modules/$route";
     if(file_exists("$dir.php")) {
         include "$dir.php";
     } else {
         if(file_exists("$dir/index.php")) {
             include "$dir/index.php";
         } else {
-            echo "$dir/index.php";
+            echo "Not found!";
         }
     }
 } else {
