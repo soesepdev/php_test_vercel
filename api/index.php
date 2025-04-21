@@ -12,11 +12,13 @@ $route = implode('/', $segments);
 
 // Cek dan include file
 if (!empty($route)) {
-    if (file_exists("$route.php")) {
-        include "$route.php";
-    } else {
-        include "$route/index.php";
-    }
+    // if (file_exists("$route.php")) {
+    //     include "$route.php";
+    // } else {
+    //     include "$route/index.php";
+    // }
+
+    echo $route;
 } else {
     phpinfo();
 }
