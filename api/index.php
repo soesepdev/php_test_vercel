@@ -7,7 +7,7 @@ $route = implode('/', $segments);
 
 if (!empty($route)) {
     var_dump(file_exists("$route.php"));
-    echo "$route.php";
+    echo "api/$route.php";
     // include "$route.php";
 } else {
     phpinfo();
