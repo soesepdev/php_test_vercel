@@ -9,7 +9,7 @@ if (!empty($route)) {
     if (file_exists("$route.php")) {
         echo $route;
     }else{
-        echo "Not found!";
+        echo $_SERVER['REQUEST_URI'];
     }
 } else {
     phpinfo();
