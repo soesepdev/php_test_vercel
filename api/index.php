@@ -3,8 +3,6 @@
 // define('BASE_PATH', __DIR__);
 // include "config/route.php";
 
-<?php
-
 $host = "localhost";       // Contoh: 127.0.0.1 atau db-host.example.com
 $user = "root";            // Contoh: root
 $pass = "";            // Contoh: secret
