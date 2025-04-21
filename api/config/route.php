@@ -14,10 +14,10 @@ if (!empty($route)) {
     $module = "modules";
     $dir = BASE_PATH . "/$module/$route";
     if(file_exists("$dir.php")) {
-        include "$route.php";
+        include "$dir.php";
     } else {
         if(file_exists("$dir/index.php")) {
-            include BASE_PATH . "$module/$route/index.php";
+            include "$dir/index.php";
         } else {
             echo "$dir/index.php";
         }
