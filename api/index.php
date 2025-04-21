@@ -6,7 +6,7 @@ $segments = explode('/', trim($path, '/'));
 $route = implode('/', $segments);
 
 if (!empty($route)) {
-    if (file_exists("https://" .$_SERVER['HTTP_HOST']. "/$route.php")) {
+    if (file_exists("/$route.php")) {
         echo "https://" .$_SERVER['HTTP_HOST']. "/$route.php");
     }else{
         echo "Not found!";
