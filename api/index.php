@@ -3,16 +3,12 @@
 // define('BASE_PATH', __DIR__);
 // include "config/route.php";
 
-$host = "localhost";       // Contoh: 127.0.0.1 atau db-host.example.com
-$user = "root";            // Contoh: root
-$pass = "";            // Contoh: secret
-$dbname = "test";     // Contoh: myapp
+$conn = pg_connect("host=db.zbnysbkzjcidikfgmqsm.supabase.co port=5432 dbname=postgres user=postgres password=SoesepDev2025");
 
-$conn = new mysqli($host, $user, $pass, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+    http_response_code(500);
+    echo "Connection failed.";
+    exit;
+}else{
+    echo "Connect";
 }
-
-echo "Connected successfully!";
