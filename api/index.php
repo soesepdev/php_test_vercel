@@ -14,11 +14,8 @@ $route = implode('/', $segments);
 if (!empty($route)) {
     if (file_exists("$route.php")) {
         include "$route.php";
-    } elseif (file_exists("$route/index.php")) {
-        include "$route/index.php";
     } else {
-        http_response_code(404);
-        echo "404 Not Found";
+        include "$route/index.php";
     }
 } else {
     phpinfo();
