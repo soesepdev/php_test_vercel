@@ -7,9 +7,11 @@ $route = implode('/', $segments);
 
 if (!empty($route)) {
     $dir = __DIR__ . "/$route.php";
-    var_dump(file_exists($dir));
-    echo __DIR__ . "/$route.php";
-    // include "$route.php";
+    if(file_exists($dir)) {
+        include "$route.php";
+    } else {
+        include "$route/index.php";
+    }
 } else {
     phpinfo();
 }
