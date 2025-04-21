@@ -7,7 +7,8 @@ $route = implode('/', $segments);
 
 // var_dump($segments);
 if($segments[0] == 'config') {
-    echo "Forbidden!";
+    http_response_code(403);
+    exit('403 Forbidden');
 }
 
 if (!empty($route)) {
@@ -18,7 +19,7 @@ if (!empty($route)) {
         if(file_exists("$dir/index.php")) {
             include "$dir/index.php";
         } else {
-            echo "Not found!";
+            http_response_code(404);
         }
     }
 } else {
