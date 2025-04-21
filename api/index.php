@@ -9,14 +9,16 @@ $dbname = getenv('PGDATABASE');
 $user = getenv('PGUSER');
 $password = getenv('PGPASSWORD');
 
-$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+echo $host;
 
-if (!$conn) {
-    echo "❌ Gagal konek ke PostgreSQL";
-    exit;
-}
+// $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
-echo "✅ Koneksi PostgreSQL sukses!<br>";
+// if (!$conn) {
+//     echo "❌ Gagal konek ke PostgreSQL";
+//     exit;
+// }
+
+// echo "✅ Koneksi PostgreSQL sukses!<br>";
 
 // Contoh query
 // $result = pg_query($conn, "SELECT * FROM users");
