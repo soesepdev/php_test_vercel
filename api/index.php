@@ -6,11 +6,15 @@ $segments = explode('/', trim($path, '/'));
 $route = implode('/', $segments);
 
 if (!empty($route)) {
-    $dir = __DIR__ . "/$route.php";
-    if(file_exists($dir)) {
+    $dir = __DIR__ . "/$route";
+    if(file_exists("$dir.php")) {
         include "$route.php";
     } else {
-        include "$route/index.php";
+        if(file_exists("$dir/index.php")) {
+            include "$route/index.php";
+        } else {
+            phpinfo();
+        }
     }
 } else {
     phpinfo();
