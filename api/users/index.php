@@ -1,8 +1,14 @@
 <?php
+header('Content-Type: application/json');
 
-$data = [
-    "name" => "Soesep Dev",
-    "gender" => "Male"
+$response = [
+    "status" => "success",
+    "message" => "Users",
+    "data" => [
+        "id" => 1,
+        "name" => "Soesep Dev",
+        "gender" => "Male"
+    ]
 ];
 
-echo json_encode($data);
+echo json_encode($response);
