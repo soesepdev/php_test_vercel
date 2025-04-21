@@ -6,8 +6,9 @@ $segments = explode('/', trim($path, '/'));
 $route = implode('/', $segments);
 
 if (!empty($route)) {
-    var_dump(file_exists("api/$route.php"));
-    echo __DIR__ . "/api/$route.php";
+    $dir = __DIR__ . "/$route.php";
+    var_dump(file_exists($dir));
+    echo __DIR__ . "/$route.php";
     // include "$route.php";
 } else {
     phpinfo();
