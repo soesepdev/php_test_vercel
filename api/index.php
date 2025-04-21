@@ -1,5 +1,2 @@
 <?php
-
-echo "PHP on Vercel";
-
-?>
+phpinfo();
