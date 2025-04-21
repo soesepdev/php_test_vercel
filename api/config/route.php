@@ -15,7 +15,7 @@ if (!empty($route)) {
         if(file_exists("$dir/index.php")) {
             include "$route/index.php";
         } else {
-            phpinfo();
+            echo "$dir/index.php";
         }
     }
 } else {
