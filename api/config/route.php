@@ -6,10 +6,10 @@ $segments = explode('/', trim($path, '/'));
 $route = implode('/', $segments);
 
 // var_dump($segments);
-if($segments[0] == 'config') {
-    http_response_code(403);
-    exit('403 Forbidden');
-}
+// if($segments[0] == 'config') {
+//     http_response_code(403);
+//     exit('403 Forbidden');
+// }
 
 if (!empty($route)) {
     $dir = BASE_PATH . "/modules/$route";
