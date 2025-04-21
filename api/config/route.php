@@ -6,14 +6,18 @@ $segments = explode('/', trim($path, '/'));
 $route = implode('/', $segments);
 
 // var_dump($segments);
+if($segments[0] == 'config') {
+    echo "Forbidden!";
+}
 
 if (!empty($route)) {
-    $dir = BASE_PATH . "/modules/$route";
+    $module = "modules";
+    $dir = BASE_PATH . "/$module/$route";
     if(file_exists("$dir.php")) {
         include "$route.php";
     } else {
         if(file_exists("$dir/index.php")) {
-            include "$route/index.php";
+            include "$module/$route/index.php";
         } else {
             echo "$dir/index.php";
         }
