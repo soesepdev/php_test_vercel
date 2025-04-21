@@ -32,4 +32,4 @@ echo $host;
 // header('Content-Type: application/json');
 // echo json_encode($data);
 
-pg_close($conn);
+// pg_close($conn);
