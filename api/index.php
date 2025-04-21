@@ -13,6 +13,8 @@ $password = getenv('PGPASSWORD');
 
 echo $host;
 
+$client = new MongoDB\Client("mongodb+srv://soesepdev:ORN3ZV3IYeIYsZNf@cluster0.nj1riyy.mongodb.net/");
+
 // $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
 // if (!$conn) {
