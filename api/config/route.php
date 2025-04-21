@@ -20,6 +20,7 @@ if (!empty($route)) {
             include "$dir/index.php";
         } else {
             http_response_code(404);
+            exit('404 Not found');
         }
     }
 } else {
