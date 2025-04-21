@@ -12,7 +12,7 @@ $route = implode('/', $segments);
 
 // Tampilkan route jika ada
 if (!empty($route)) {
-    echo "$route.php";
+    include "$route.php";
 } else {
     phpinfo();
 }
