@@ -18,6 +18,7 @@ try {
 
     foreach ($cursor as $value) {
         echo $value->name;
+        echo "</br>";
     }
 } catch (Exception $e) {
     echo "Connection failed: " . $e->getMessage();
