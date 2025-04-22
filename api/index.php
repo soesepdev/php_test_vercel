@@ -14,8 +14,13 @@ try {
     $database = $client->selectDatabase('portfolio');
 
     $collection = $database->selectCollection('users');
+    $cursor = $collection->find();
 
-    var_dump($collection);
+    foreach ($cursor as $document) {
+        echo "<pre>";
+        print_r($document);
+        echo "</pre>";
+    }
 } catch (Exception $e) {
     echo "Connection failed: " . $e->getMessage();
 }
