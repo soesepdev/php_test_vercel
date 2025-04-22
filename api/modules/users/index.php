@@ -15,8 +15,9 @@
 
     $collection = $database->selectCollection('users');
     $cursor = $collection->find();
+var_dump($collection);
 
-    foreach ($cursor as $value) {
-        echo $value->name;
-        echo "</br>";
-    }
+    // foreach ($cursor as $value) {
+    //     echo $value->name;
+    //     echo "</br>";
+    // }
