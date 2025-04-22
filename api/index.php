@@ -12,8 +12,10 @@ try {
     // Ganti dengan Mongo URI yang sesuai
     $client = new Client("mongodb+srv://soesepdev:SoesepDev2025@cluster0.nj1riyy.mongodb.net/");
     $database = $client->selectDatabase('portfolio');
-    echo "MongoDB connection successful!";
-    var_dump($client);
+
+    $collection = $database->selectCollection('users');
+
+    var_dump($collection);
 } catch (Exception $e) {
     echo "Connection failed: " . $e->getMessage();
 }
