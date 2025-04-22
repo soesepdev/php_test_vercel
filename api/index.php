@@ -1,19 +1,19 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+// require_once __DIR__ . '/../vendor/autoload.php';
 
-// define('BASE_PATH', __DIR__);
-// include "config/route.php";
+define('BASE_PATH', __DIR__);
+include "config/route.php";
 
-$host = getenv('PGHOST');
-$port = getenv('PGPORT');
-$dbname = getenv('PGDATABASE');
-$user = getenv('PGUSER');
-$password = getenv('PGPASSWORD');
+// $host = getenv('PGHOST');
+// $port = getenv('PGPORT');
+// $dbname = getenv('PGDATABASE');
+// $user = getenv('PGUSER');
+// $password = getenv('PGPASSWORD');
 
-echo $host;
+// echo $host;
 
-$client = new MongoDB\Client("mongodb+srv://soesepdev:ORN3ZV3IYeIYsZNf@cluster0.nj1riyy.mongodb.net/");
+// $client = new MongoDB\Client("mongodb+srv://soesepdev:ORN3ZV3IYeIYsZNf@cluster0.nj1riyy.mongodb.net/");
 
 // $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
