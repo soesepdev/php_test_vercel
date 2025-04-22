@@ -2,28 +2,17 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-define('BASE_PATH', __DIR__);
-include "config/route.php";
+// define('BASE_PATH', __DIR__);
+// include "config/route.php";
 
-// $host = getenv('PGHOST');
-// $port = getenv('PGPORT') ?: 5432;
-// $dbname = getenv('PGDATABASE');
-// $user = getenv('PGUSER');
-// $password = getenv('PGPASSWORD');
 
-// try {
-//     $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
-//     $pdo = new PDO($dsn, $user, $password, [
-//         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-//     ]);
-//     echo "✅ Connected to PostgreSQL!";
-    
-//     // Tes query
-//     $stmt = $pdo->query("SELECT version()");
-//     $version = $stmt->fetchColumn();
-//     echo "<br>PostgreSQL version: $version";
-// } catch (PDOException $e) {
-//     http_response_code(500);
-//     echo "❌ Connection failed: " . $e->getMessage();
-//     exit;
-// }
+use MongoDB\Client;
+
+try {
+    // Ganti dengan Mongo URI yang sesuai
+    $client = new Client("mongodb://localhost:27017");
+    $database = $client->selectDatabase('test');
+    echo "MongoDB connection successful!";
+} catch (Exception $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
