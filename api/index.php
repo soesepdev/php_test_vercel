@@ -16,10 +16,8 @@ try {
     $collection = $database->selectCollection('users');
     $cursor = $collection->find();
 
-    foreach ($cursor as $document) {
-        echo "<pre>";
-        print_r($document);
-        echo "</pre>";
+    foreach ($cursor as $value) {
+        echo $value->name;
     }
 } catch (Exception $e) {
     echo "Connection failed: " . $e->getMessage();
