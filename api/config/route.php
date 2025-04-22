@@ -25,3 +25,11 @@ if (!empty($route)) {
 } else {
     phpinfo();
 }
+
+    $collection = $database->selectCollection('users');
+    $cursor = $collection->find();
+
+    foreach ($cursor as $value) {
+        echo $value->name;
+        echo "</br>";
+    }
