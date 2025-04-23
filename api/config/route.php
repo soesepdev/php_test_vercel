@@ -13,10 +13,10 @@ if($segments[0] == 'config') {
 if (!empty($route)) {
     $dir = BASE_PATH . "/modules/$route";
     if(file_exists("$dir.php")) {
-        include "$dir.php";
+        include_once "$dir.php";
     } else {
         if(file_exists("$dir/index.php")) {
-            include "$dir/index.php";
+            include_once "$dir/index.php";
         } else {
             http_response_code(404);
             exit('404 Not found');
